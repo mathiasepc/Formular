@@ -44,9 +44,9 @@ $.validator.methods.email = function( value, element ) {
 jQuery.validator.addMethod("myName", function(value, element) {
     /*Trimmer name for at se om man har ved en fejl lavet et mellemrum*/
     value = value.killWhiteSpace();
-    if(!value.startsWith(" ") & !value.endsWith(" ")){
-        return this.optional( element ) || /^[a-zA-z ]*$/.test( value );
-    }
+    alert(value)
+    return this.optional( element ) || /^[a-zA-z ]*$/.test( value );
+    
 }, 'Only chars allowed. Spaces are between names.');
 
 
@@ -55,6 +55,6 @@ jQuery.validator.addMethod("myName", function(value, element) {
 Fandt en fejl ved name. hvis man blev ved med at trykke space godkendte den ordet.
 Det gør den ikke mere.*/
 String.prototype.killWhiteSpace = function() {
-    /*Get rid of my extra        whitespaces */
+    /*fjerner ekstra      whitespaces */
     return this.replace(/\s+/g, ' ');
 };
