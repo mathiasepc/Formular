@@ -42,5 +42,9 @@ $.validator.methods.email = function( value, element ) {
 
 /*Laver et tjek på brugernavnet, at der kun er bogstaver og whitespace. */
 jQuery.validator.addMethod("myName", function(value, element) {
-    return this.optional( element ) || /^[a-zA-z ]*$/.test( value );
-}, 'Only chars/letters allowed.');
+    /*Trimmer name for at se om man har ved en fejl lavet et mellemrum*/
+    value = value.trim();
+    if(!value.startsWith(" ") & !value.endsWith(" ")){
+        return this.optional( element ) || /^[a-zA-z ]*$/.test( value );
+    }
+}, 'Only chars allowed. Spaces are between names.');
