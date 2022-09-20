@@ -55,5 +55,6 @@ jQuery.validator.addMethod("myName", function(value, element) {
 Fandt en fejl ved name. hvis man blev ved med at trykke space godkendte den ordet.
 Det gør den ikke mere.*/
 String.prototype.killWhiteSpace = function() {
+    /*Get rid of my extra        whitespaces */
     return this.replace(/\s+/g, ' ');
 };
