@@ -42,18 +42,15 @@ $.validator.methods.email = function( value, element ) {
 
 /*Laver et tjek på brugernavnet, at der kun er bogstaver og whitespace. */
 jQuery.validator.addMethod("myName", function(value, element) {
+
+    /* prototype gør at jeg søger efter variablens propperty.Kan derfor manipulere med den.*/
+    String.prototype.killWhiteSpace = function() {
+        /*fjerner ekstra      whitespaces */
+        return this.replace(/\s+/g, ' ');
+    };
+
     /*Trimmer name for at se om man har ved en fejl lavet et mellemrum*/
     value = value.killWhiteSpace();
+    alert(value)
     return this.optional( element ) || /^[a-zA-z ]*$/.test( value );
-    
 }, 'Only chars allowed. Spaces are between names.');
-
-
-/* prototype gør at jeg søger efter variablens propperty.Kan derfor manipulere med den.
-
-Fandt en fejl ved name. hvis man blev ved med at trykke space godkendte den ordet, uden du havde skrevet tekst.
-Det gør den ikke mere.*/
-String.prototype.killWhiteSpace = function() {
-    /*fjerner ekstra      whitespaces */
-    return this.replace(/\s+/g, ' ');
-};
