@@ -14,9 +14,8 @@ $("#formValidation").validate({
             digits: true
           },
         address: {
-            address: true,
             minlength: 2
-        },
+        }
     },
     /*Det er hvad fejl beskeden skal være på de forskellige felter */
     messages: {
