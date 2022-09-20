@@ -1,0 +1,28 @@
+body{
+    font-family: Arial;
+    font-size: 16px;
+    margin: 0px;
+    background-color: blue;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+
+.input_container{
+    width: 400px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 10px solid #41b9ff
+}
+
+.input_container .input-row{
+    margin-bottom: 12px;
+}
+
+
+
+
+
