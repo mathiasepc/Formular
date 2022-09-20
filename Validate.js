@@ -51,6 +51,5 @@ jQuery.validator.addMethod("myName", function(value, element) {
 
     /*Trimmer name for at se om man har ved en fejl lavet et mellemrum*/
     value = value.killWhiteSpace();
-    alert(value)
     return this.optional( element ) || /^[a-zA-z ]*$/.test( value );
 }, 'Only chars allowed. Spaces are between names.');
