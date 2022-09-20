@@ -44,7 +44,7 @@ $.validator.methods.email = function( value, element ) {
 /*Laver et tjek på brugernavnet, at der kun er bogstaver og whitespace. */
 jQuery.validator.addMethod("myName", function(value, element) {
 
-    /* prototype gør at jeg søger efter variablens propperty.Kan derfor manipulere med den.*/
+    /* prototype gør at jeg søger efter variablens propperty. Kan derfor manipulere med den.*/
     String.prototype.killWhiteSpace = function() {
         /*fjerner ekstra      whitespaces */
         return this.replace(/\s+/g, ' ');
