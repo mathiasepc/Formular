@@ -14,6 +14,7 @@ $("#formValidation").validate({
             digits: true
           },
         address: {
+            address: true,
             minlength: 2
         },
     },
@@ -28,7 +29,7 @@ $("#formValidation").validate({
             required: "Please enter your number.",
             minlength: "Must be 8 digits."
         },
-        address: "Please enter your address."
+        address: "Please enter your address. Must be 2 chars"
     },
     submitHandler: function(form) {
         form.submit();
@@ -49,7 +50,10 @@ jQuery.validator.addMethod("myName", function(value, element) {
         return this.replace(/\s+/g, ' ');
     };
 
-    /*Trimmer name for at se om man har ved en fejl lavet et mellemrum*/
+    /*Trimmer name for unødvendig mellemrum*/
     value = value.killWhiteSpace();
-    return this.optional( element ) || /^[a-zA-z ]*$/.test( value );
+    /*Hvis navnet ikke er tomt */
+    if(!value.startsWith(" ") && !value.endsWith(" ")){
+        return this.optional( element ) || /^[a-zA-z ]*$/.test( value );
+    }
 }, 'Only chars allowed. Spaces are between names.');
