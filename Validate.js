@@ -51,7 +51,9 @@ jQuery.validator.addMethod("myName", function(value, element) {
     };
 
     /*Trimmer name for unødvendig mellemrum*/
+    value = value.trim();
     value = value.killWhiteSpace();
+    
     /*Hvis navnet ikke er tomt */
     if(!value.startsWith(" ") && !value.endsWith(" ")){
         return this.optional( element ) || /^[a-zA-z ]*$/.test( value );
