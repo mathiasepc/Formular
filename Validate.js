@@ -51,7 +51,7 @@ jQuery.validator.addMethod("myName", function(value, element) {
 
 /* prototype gør at jeg søger efter variablens propperty.
 
-Fandt en fejl ved name. hvis man blev ved med at trykke space godkendte den ordet.
+Fandt en fejl ved name. hvis man blev ved med at trykke space godkendte den ordet, uden du havde skrevet tekst.
 Det gør den ikke mere.*/
 String.prototype.killWhiteSpace = function() {
     /*fjerner ekstra      whitespaces */
