@@ -49,7 +49,7 @@ jQuery.validator.addMethod("myName", function(value, element) {
 }, 'Only chars allowed. Spaces are between names.');
 
 
-/* prototype gør at jeg søger efter variablens propperty.
+/* prototype gør at jeg søger efter variablens propperty.Kan derfor manipulere med den.
 
 Fandt en fejl ved name. hvis man blev ved med at trykke space godkendte den ordet, uden du havde skrevet tekst.
 Det gør den ikke mere.*/
