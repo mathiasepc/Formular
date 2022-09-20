@@ -13,7 +13,7 @@ $("#formValidation").validate({
             minlength: 8,
             digits: true
           },
-        adresse: {
+        adres: {
             minlength: 2
         },
     },
@@ -28,7 +28,7 @@ $("#formValidation").validate({
             required: "Please enter your number.",
             minlength: "Must be 8 digits."
         },
-        adresse: "Please enter your address."
+        adres: "Please enter your address."
     },
     submitHandler: function(form) {
         form.submit();
