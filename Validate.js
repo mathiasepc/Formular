@@ -23,7 +23,7 @@ $("#formValidation").validate({
             required: "Please enter your name.",
             minlength: "Name at least 2 characters."
         },
-        email: "Please enter a valid E-mail.",
+        email: "Please enter a valid E-mail. 'test@hej.com'",
         tlf:{
             required: "Please enter your number.",
             minlength: "Must be 8 digits."
@@ -40,7 +40,7 @@ $.validator.methods.email = function( value, element ) {
     return this.optional( element ) || /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/.test( value );
 }
 
-/*Laver et tjek på brugernavnet, at der kun er bogstaver. */
+/*Laver et tjek på brugernavnet, at der kun er bogstaver og whitespace. */
 jQuery.validator.addMethod("myName", function(value, element) {
-    return this.optional( element ) || /^[a-zA-z]*$/.test( value );
+    return this.optional( element ) || /^[a-zA-z ]*$/.test( value );
 }, 'Only chars/letters allowed.');
