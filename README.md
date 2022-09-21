@@ -1,2 +1,2 @@
 # LoginForm
- Jeg har lavet en login form ved brug af validate() i jquery
+ Jeg har lavet en formular ved brug af validate() i jquery
