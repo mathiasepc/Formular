@@ -28,7 +28,7 @@ $("#formValidation").validate({
             required: "Please enter your number.",
             minlength: "Must be 8 digits."
         },
-        address: "Please enter your address. Must be 2 chars"
+        address: "Please enter your address. Must be 2 characters"
     },
     submitHandler: function(form) {
         form.submit();
@@ -59,4 +59,4 @@ jQuery.validator.addMethod("myName", function(value, element) {
         test tester for et match i en string */
         return this.optional( element ) || /^[a-zA-z ]*$/.test( value );
     }
-}, 'Only chars allowed. Spaces are between names.');
+}, 'Only characters allowed. Spaces are between names.');
