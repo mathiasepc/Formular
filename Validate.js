@@ -37,6 +37,8 @@ $("#formValidation").validate({
 
 /*Laver et check på email, at den indeholder det som den skal. Bruger regex til at samligne */
 $.validator.methods.email = function( value, element ) {
+    /*optional tjekker om feltet er tom eller ej, før den begynder at kontrollere på reglerne
+    test tester for et match i en string */
     return this.optional( element ) || /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/.test( value );
 }
 
